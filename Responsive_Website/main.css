@@ -1,6 +1,6 @@
 #product-overview {
   background: linear-gradient(to top, rgba(80, 68, 18, 0.6) 10%, transparent),
-    url("images/freedom.jpg") left 10% bottom 70%/cover no-repeat border-box,
+    url("images/freedom.jpg") center/cover no-repeat border-box,
     #ff1b68;
   /* background-image: url("freedom.jpg");
     background-size: cover;
@@ -44,26 +44,25 @@
   }
 }
 
-.plan__list {
-  width: 80%;
-  margin: auto;
+/* .plan__list {
+  width: 100%;
   text-align: center;
-}
+} */
 
 .plan {
   background: #d5ffdc;
   text-align: center;
   padding: 1rem;
-  margin: 0.5rem;
-  display: inline-block;
-  width: 30%;
-  vertical-align: middle;
+  margin: 0.5rem 0;
+  display: block;
+  width: 100%;
+ 
 }
 
 .plan--highlighted {
   background: #19b84c;
   color: white;
-  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+  /* box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5); */
 }
 
 .plan__annotation {
@@ -98,6 +97,29 @@
 
 .plan__feature {
   margin: 0.5rem 0;
+}
+
+@media (min-width: 40rem){
+  .plan__list {
+  width: 100%;
+  text-align: center;
+} 
+  .plan{
+    display: inline-block;
+    /* if we want to have an inline block, we can't have width to 100%
+    as the element will take the full width so they will automatically become
+    block level element */
+    width: 30%;
+    vertical-align: middle;
+    /* watch the video bookmarked-making the plans responsive as for why we have 
+    min and max width */
+    min-width:13rem; /* this is around 209 px */
+    max-width: 25rem;
+  }
+
+  .plan--highlighted {
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+  }
 }
 
 #key-features {
