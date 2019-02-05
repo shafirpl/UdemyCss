@@ -74,23 +74,11 @@ body {
 }
 
 .main-nav {
-    display: inline-block;
-    text-align: right;
-    width: calc(100% - 122px); 
-    /* that 122 px is coming since the toggle button is 3rem */
-    vertical-align: middle;
+    display: none;
+
 }
 
-.main-nav__items {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
 
-.main-nav__item {
-    display: inline-block;
-    margin: 0 1rem;
-}
 
 .main-nav__item a,
 .mobile-nav__item a {
@@ -138,8 +126,8 @@ body {
 }
 
 .main-footer__link {
-    display: inline-block;
-    margin: 0 1rem;
+    display: block;
+    margin: 1rem 0;
 }
 
 .main-footer__link a {
@@ -205,4 +193,45 @@ body {
 
 .open{
     display: block !important;
+}
+
+@media (min-width: 40rem){
+  /* making the toggle button disseaper on desktop site */
+  .toggle-button{
+    display: none;
+  }
+  /* displaying the nav items only on desktop site */
+
+  .main-nav {
+      display: inline-block;
+      text-align: right;
+      width: calc(100% - 44px);
+      /* that 122 px is coming since the toggle button is 3rem */
+      vertical-align: middle;
+  }
+
+  .main-nav__items {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+  }
+
+  .main-nav__item {
+      display: inline-block;
+      margin: 0 1rem;
+  }
+
+
+  .main-header__brand {
+      height: 2.5rem;
+
+  }
+
+
+  .main-footer__link {
+      display: inline-block;
+      margin: 0 1rem;
+
+  }
+
 }

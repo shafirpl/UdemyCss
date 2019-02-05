@@ -42,6 +42,7 @@
     height: 40vh;
     background-position: 50% 25%;
   }
+
 }
 
 /* .plan__list {
@@ -56,7 +57,7 @@
   margin: 0.5rem 0;
   display: block;
   width: 100%;
- 
+
 }
 
 .plan--highlighted {
@@ -99,28 +100,7 @@
   margin: 0.5rem 0;
 }
 
-@media (min-width: 40rem){
-  .plan__list {
-  width: 100%;
-  text-align: center;
-} 
-  .plan{
-    display: inline-block;
-    /* if we want to have an inline block, we can't have width to 100%
-    as the element will take the full width so they will automatically become
-    block level element */
-    width: 30%;
-    vertical-align: middle;
-    /* watch the video bookmarked-making the plans responsive as for why we have 
-    min and max width */
-    min-width:13rem; /* this is around 209 px */
-    max-width: 25rem;
-  }
 
-  .plan--highlighted {
-    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
-  }
-}
 
 #key-features {
   background: #ff1b68;
@@ -141,10 +121,19 @@
 }
 
 .key-feature {
+  display: block;
+  vertical-align: top;
+  margin: 0 auto;
+
+}
+
+/* .key-feature {
   display: inline-block;
   width: 30%;
   vertical-align: top;
-}
+} */
+
+
 
 .key-feature__image {
   background: #ffcede;
@@ -214,3 +203,33 @@
 /* h1 {
     font-family: sans-serif;
 } */
+
+@media (min-width: 40rem){
+  .plan__list {
+  width: 100%;
+  text-align: center;
+}
+  .plan{
+    display: inline-block;
+    /* if we want to have an inline block, we can't have width to 100%
+    as the element will take the full width so they will automatically become
+    block level element */
+    width: 30%;
+    vertical-align: middle;
+    /* watch the video bookmarked-making the plans responsive as for why we have
+    min and max width */
+    min-width:13rem; /* this is around 209 px */
+    max-width: 25rem;
+  }
+
+  .plan--highlighted {
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+  }
+
+  .key-feature {
+    display: inline-block;
+    width: 30%;
+    max-width: 25rem;
+
+  }
+}
