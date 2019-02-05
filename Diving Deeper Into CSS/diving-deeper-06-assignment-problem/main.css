@@ -1,0 +1,23 @@
+.first-box, .second-box{
+  border: 5px solid red;
+  margin: 5px 0px;
+  padding: 5px 10px;
+  text-align: center;
+  width: 48%;
+  display: inline-block;
+  margin:0;
+  box-sizing: border-box;
+}
+
+.first-box{
+  height: 300px;
+  /* visibility: hidden; */
+}
+
+
+
+
+.second-box:hover{
+  color: green;
+  background-color: blue;
+}
